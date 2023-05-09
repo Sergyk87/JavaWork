@@ -4,31 +4,37 @@
 
 package HomeWork2;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Task2 {
     public static void main(String[] args) throws IOException {
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("file.txt"))) {
-            String[] input = reader.readLine()
-                    .replace("{", "")
-                    .replace("}", "")
-                    .split(",");
-
-            StringBuilder sb = new StringBuilder();
-            sb.append("SELECT * FROM students WHERE ");
-
-            for (String s : input) {
-                String[] temp = s.trim().split(":");
-                if (!temp[1].contains("null")) {
-                    sb.append(temp[0].replace("\"", "")).append(" = ").append(temp[1]).append(" AND ");
+        int[] array = { 12, 3, 64, -5, 6, 3, 21, -11, 12, 99 };
+        System.out.println(Arrays.toString(array));
+        boolean isSorted = false;
+        Logger logger = Logger.getLogger(Task2.class.getName());
+        FileHandler fileHandler = new FileHandler("log.txt");
+        SimpleFormatter sf = new SimpleFormatter();
+        fileHandler.setFormatter(sf);
+        logger.addHandler(fileHandler);
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] < array[i - 1]) {
+                    int temp = array[i];
+                    array[i] = array[i - 1];
+                    array[i - 1] = temp;
+                    isSorted = false;
                 }
-            }
 
-            sb.replace(sb.lastIndexOf(" AND "), sb.length() - 1, ";");
-            System.out.println(sb);
+            }
+            logger.info(Arrays.toString(array));
         }
+        System.out.println(Arrays.toString(array));
     }
+
 }

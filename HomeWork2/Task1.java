@@ -21,7 +21,8 @@ public class Task1 {
 
             while ((line = br.readLine()) != null) {
                 line = line.substring(1, line.length() - 2);
-                sb.append("SELECT * FROM students WHERE ");        
+                sb.append("SELECT * FROM students WHERE ");
+
                 String[] substrings = line.split(",");
                 for (String string : substrings) {
                     String[] temp = string.trim().split(":");
@@ -29,10 +30,12 @@ public class Task1 {
                         sb.append(temp[0].replace("\"", "")).append(" = ").append(temp[1]).append(" AND ");
                     }
                 }
+
                 sb.replace(sb.lastIndexOf(" AND "), sb.length() - 1, ";");
                 System.out.println(sb);
             }
             br.close();
+
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());
         }
