@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "HomeWork3.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "HomeWork3.Task3",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "HomeWork3.Task2",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Second3.Task3",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Second3.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "StringEquality",
+            "request": "launch",
+            "mainClass": "Second3.StringEquality",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "ListQuirks",
+            "request": "launch",
+            "mainClass": "Second3.ListQuirks",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
             "name": "Task2",
             "request": "launch",
             "mainClass": "HomeWork2.Task2",
