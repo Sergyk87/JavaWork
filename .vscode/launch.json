@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "HomeWork5.Task3",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "HomeWork5.Task2",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "HomeWork5.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Second5.Task2",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Second5.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Pasports",
+            "request": "launch",
+            "mainClass": "Second5.Pasports",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
             "name": "Task1",
             "request": "launch",
             "mainClass": "HomeWork3.Task1",
