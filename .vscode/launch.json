@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "HomeWork4.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Second4.Task3",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "CompareLists",
+            "request": "launch",
+            "mainClass": "Second4.CompareLists",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Logging",
+            "request": "launch",
+            "mainClass": "Second4.Logging",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
             "name": "Task4",
             "request": "launch",
             "mainClass": "HomeWork5.Task4",
