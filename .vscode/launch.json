@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NotebookFilter",
+            "request": "launch",
+            "mainClass": "HomeWork6.NotebookFilter",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "HomeWork6.Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Task2",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Task1",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
             "name": "Task2",
             "request": "launch",
             "mainClass": "HomeWork4.Task2",
