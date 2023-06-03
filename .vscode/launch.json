@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "ru.geekbrains.lesson1.Program",
+            "projectName": "lesson1"
+        },
+        {
+            "type": "java",
             "name": "NotebookFilter",
             "request": "launch",
             "mainClass": "HomeWork6.NotebookFilter",
