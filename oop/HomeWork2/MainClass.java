@@ -21,6 +21,7 @@ public class MainClass {
                 System.out.printf("Еды не хватило, %s остался голодным\nНужно добавить еды!", cat.getName());
                 System.out.println();
                 plate.addFood(plateSize);
+                System.out.println("Наполнили тарелку");
                 plate.info();
                 catEat(plate, cat);
 
