@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Program",
             "request": "launch",
+            "mainClass": "ru.geekbrains.lesson3.task2.Program",
+            "projectName": "lesson3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
+            "mainClass": "ru.geekbrains.lesson3.Program",
+            "projectName": "lesson3"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
             "mainClass": "ru.geekbrains.lesson2.Program",
             "projectName": "lesson2"
         },
