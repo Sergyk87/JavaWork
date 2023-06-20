@@ -2,7 +2,9 @@ package oop.lesson5.views;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.jar.Attributes.Name;
 
+import oop.lesson5.models.Reservation;
 import oop.lesson5.models.Table;
 import oop.lesson5.presenters.View;
 import oop.lesson5.presenters.ViewObserver;
@@ -32,7 +34,7 @@ public class BookingView implements View {
      * Действие клиента (пользователь нажал на кнопку бронирования), бронирование столика
      * @param reservationDate дата бронирования
      * @param tableNo номер столика
-     * @param name имя клиета
+     * @param name имя клиента
      */
     public void reservationTableEvent(Date reservationDate, int tableNo, String name){
         observer.onReservationTable(reservationDate, tableNo, name);
@@ -46,7 +48,7 @@ public class BookingView implements View {
      * @param name
      */
     public void changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name){
-
+        observer.onChangeReservationTable(oldReservation, reservationDate, tableNo, name);
     }
 
 }

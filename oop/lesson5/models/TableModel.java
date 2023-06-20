@@ -50,10 +50,22 @@ public class TableModel implements Model {
      * Поменять бронь столика
      * @return
      */
-    public int changeReservationTable(){
+
+
+    public int changeReservationTable(int oldReservation){
+        for (Table table : tables) {
+            for (Reservation reservation : table.getReservations()) {
+                if (reservation.getId() == oldReservation) {
+                    table.getReservations().remove(reservation);
+                    table.getReservations().add(reservation);
+                    return reservation.getId();
+                }
+            }
+        }
         return 0;
-        //TODO: Для создания нового резерва столика стоит воспользоваться уже
-        // существующим методом reservationTable
+    }
+    //     //TODO: Для создания нового резерва столика стоит воспользоваться уже
+    //     // существующим методом reservationTable
     }
 
-}
+
