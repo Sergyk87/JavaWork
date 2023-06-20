@@ -52,13 +52,12 @@ public class TableModel implements Model {
      */
 
 
-    public int changeReservationTable(int oldReservation){
+    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name){
         for (Table table : tables) {
             for (Reservation reservation : table.getReservations()) {
                 if (reservation.getId() == oldReservation) {
                     table.getReservations().remove(reservation);
-                    table.getReservations().add(reservation);
-                    return reservation.getId();
+                    return reservationTable(reservationDate, tableNo, name);
                 }
             }
         }
