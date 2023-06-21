@@ -10,7 +10,8 @@ public class Program {
 
     /**
      * TODO: ДОМАШНЯЯ РАБОТА
-     *  Метод changeReservationTable должен заработать!
+     * Метод changeReservationTable должен заработать!
+     * 
      * @param args
      */
     public static void main(String[] args) {
@@ -23,5 +24,5 @@ public class Program {
 
         bookingView.changeReservationTable(9001, new Date(), 105, "Сергей");
     }
-    
+
 }

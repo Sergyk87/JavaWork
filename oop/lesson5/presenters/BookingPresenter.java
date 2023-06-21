@@ -10,21 +10,21 @@ public class BookingPresenter implements ViewObserver {
     private final View bookingView;
     private final Model tableModel;
 
-    public BookingPresenter(View bookingView, Model tableModel){
+    public BookingPresenter(View bookingView, Model tableModel) {
         this.bookingView = bookingView;
         this.tableModel = tableModel;
         bookingView.setObserver(this);
     }
 
-    private Collection<Table> loadTables(){
+    private Collection<Table> loadTables() {
         return tableModel.loadTables();
     }
 
-    public void showTables(){
+    public void showTables() {
         bookingView.updateTablesView(loadTables());
     }
 
-    private void showReservationTableResult(int reservationNo){
+    private void showReservationTableResult(int reservationNo) {
         bookingView.updateReservationTableResult(reservationNo);
     }
 
@@ -34,13 +34,14 @@ public class BookingPresenter implements ViewObserver {
         showReservationTableResult(reservationNo);
     }
 
-    public void printChangeReservationTableResult(int reservationId) {
-        bookingView.updateReservationTableResult(reservationId);
+    public void printChangeReservationTableResult(int reservationNo) {
+        bookingView.updateReservationTableResult(reservationNo);
     }
 
     @Override
-    public void onChangeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name) {
-        tableModel.changeReservationTable(oldReservation, reservationDate, tableNo, name);
-        onReservationTable(reservationDate, tableNo, name);
+    public void onChangeReservationTable(int oldReservation, Date orderDate, int tableNo, String name) {
+        int reservationNo = tableModel.changeReservationTable(oldReservation, orderDate, tableNo, name);
+        printChangeReservationTableResult(reservationNo);
     }
+
 }

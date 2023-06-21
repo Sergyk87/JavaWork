@@ -8,15 +8,15 @@ import oop.lesson5.presenters.Model;
 
 public class TableModel implements Model {
 
-
     private Collection<Table> tables;
 
     /**
      * Получение списка всех столиков
+     * 
      * @return
      */
-    public Collection<Table> loadTables(){
-        if (tables == null){
+    public Collection<Table> loadTables() {
+        if (tables == null) {
             tables = new ArrayList<>();
 
             tables.add(new Table());
@@ -30,14 +30,15 @@ public class TableModel implements Model {
 
     /**
      * Бронирование столика
+     * 
      * @param reservationDate Дата бронирования
-     * @param tableNo Номер столика
-     * @param name Имя клиента
+     * @param tableNo         Номер столика
+     * @param name            Имя клиента
      * @return Номер брони
      */
-    public int reservationTable(Date reservationDate, int tableNo, String name){
+    public int reservationTable(Date reservationDate, int tableNo, String name) {
         for (Table table : tables) {
-            if (table.getNo() == tableNo){
+            if (table.getNo() == tableNo) {
                 Reservation reservation = new Reservation(reservationDate, name);
                 table.getReservations().add(reservation);
                 return reservation.getId();
@@ -46,13 +47,14 @@ public class TableModel implements Model {
         return -1;
     }
 
-    /**TODO: Разработать метод самостоятельно в рамках домашнего задания
+    /**
+     * TODO: Разработать метод самостоятельно в рамках домашнего задания
      * Поменять бронь столика
+     * 
      * @return
      */
 
-
-    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name){
+    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name) {
         for (Table table : tables) {
             for (Reservation reservation : table.getReservations()) {
                 if (reservation.getId() == oldReservation) {
@@ -63,8 +65,6 @@ public class TableModel implements Model {
         }
         return 0;
     }
-    //     //TODO: Для создания нового резерва столика стоит воспользоваться уже
-    //     // существующим методом reservationTable
-    }
-
-
+    // //TODO: Для создания нового резерва столика стоит воспользоваться уже
+    // // существующим методом reservationTable
+}
