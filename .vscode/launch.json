@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Program",
             "request": "launch",
+            "mainClass": "oop.lesson6.srp2.Program",
+            "projectName": "java_projects_84480e3f"
+        },
+        {
+            "type": "java",
+            "name": "Program",
+            "request": "launch",
             "mainClass": "oop.lesson5.Program",
             "projectName": "java_projects_84480e3f"
         },
