@@ -2,7 +2,7 @@ package oop.lesson7.observer;
 
 import java.util.Random;
 
-public class Master implements Observer {
+public class Manager implements Observer {
 
     private static Random random = new Random();
 
@@ -12,7 +12,7 @@ public class Master implements Observer {
 
     private double minSalary;
 
-    public Master(String name, VacancyType vacancyType, double minSalary) {
+    public Manager(String name, VacancyType vacancyType, double minSalary) {
         this.name = name;
         this.vacancyType = vacancyType;
         minSalary = random.nextDouble(80000, 100000);
@@ -22,17 +22,16 @@ public class Master implements Observer {
     public void receiveOffer(String nameCompany, Vacancy vacancy) {
         if (vacancyType == vacancy.getVacanceName())
             if (minSalary <= vacancy.getMaxSalary()) {
-                System.out.printf("Мастер %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
+                System.out.printf("Менеджер %s (%.2f) >>> Мне нужна эта работа! (%s %s - %.2f)\n",
                         name, minSalary, nameCompany, vacancy.getVacanceName(), vacancy.getMaxSalary());
                 minSalary = vacancy.getMaxSalary();
             } else {
-                System.out.printf("Мастер %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
+                System.out.printf("Менеджер %s (%.2f) >>> Я найду работу получше! (%s %s - %.2f)\n",
                         name, minSalary, nameCompany, vacancy.getVacanceName(), vacancy.getMaxSalary());
             }
         else {
-            System.out.printf("Мастер %s (%.2f) >>> Вакансия %s от компании %s - %.2f мне не подходит)\n",
+            System.out.printf("Менеджер %s (%.2f) >>> Вакансия %s от компании %s - %.2f мне не подходит)\n",
                     name, minSalary, nameCompany, vacancy.getVacanceName(), vacancy.getMaxSalary());
         }
     }
-
 }
